@@ -6,7 +6,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+
+app.secret_key = "jochimin"
+
 password = 'G2s~Dj{kK#7Ug>6rD{L'
+
 app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql://root:{password}@localhost/contacts'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
