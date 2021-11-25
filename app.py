@@ -4,16 +4,16 @@ from flask_sqlalchemy import SQLAlchemy
 from config import DATABASE_URI
 
 
+# Initialize the app
 app = Flask(__name__)
 
-
-app.secret_key = "jochimin"
-
+# Configure the app
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
-
+app.config['SECRET_KEY'] = 'secret'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+# instantiate the db
 SQLAlchemy(app)
 
-
+# Register the blueprints
 app.register_blueprint(contacts)

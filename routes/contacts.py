@@ -1,3 +1,4 @@
+# imports
 from flask import Blueprint, render_template, request, url_for, flash
 from werkzeug.utils import redirect
 from models.contacts import Contact

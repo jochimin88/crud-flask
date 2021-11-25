@@ -13,14 +13,12 @@
 
 {% endwith %}
 
-
 <h1> Update</h1>
-
 
 <form action="/update/{{contact.id}}" method="POST" class="card bg-dark text-white">
     
-    <div class="card-body p-4">
-        <div class="mb-3">
+    <div class="flex-container">
+        <div class="flex-item">
             <label for="fullname"> Write you fullname</label>
             <input
              type="text" 
