@@ -16,12 +16,46 @@
 
 <h1> Update</h1>
 
-<form action="/update/{{contact.id}}" method="POST">
-    <input type="text" name="fullname" placeholder="Write your name here" value="{{contact.fullname}}" />
-    <input type="text" name="email" placeholder="Write your email" value={{contact.email}}>
-    <input type="text" name="phone" placeholder="Write your phone" value={{contact.phone}}>
 
-    <button>Save it </button>
+<form action="/update/{{contact.id}}" method="POST" class="card bg-dark text-white">
+    
+    <div class="card-body p-4">
+        <div class="mb-3">
+            <label for="fullname"> Write you fullname</label>
+            <input
+             type="text" 
+             name="fullname" 
+             placeholder="Write your name here" 
+             value="{{contact.fullname}}"
+             class="form-control rounded-0 bg-dark border-0 text-white"
+              />
+        
+            </div>
+            <div class="mb-3">
+                <label for="fullname"> Write you email</label>
+            <input 
+            type="text" 
+            name="email" 
+            placeholder="Write your email" 
+            value={{contact.email}}
+            class="form-control rounded-0 bg-dark border-0 text-white"
+            />
+            </div>
+            
+            <div class="mb-3">
+            <label for="fullname"> Write you phone number</label>
+            <input 
+            type="text" 
+            name="phone" 
+            placeholder="Write your phone" 
+            value={{contact.phone}}
+            class="form-control rounded-0 bg-dark border-0 text-white"
+            />
+            </div>
+            <button class="btn btn-success">Save it </button>
+            
+    </div>
+   
 </form>
 
 {% endblock %}
